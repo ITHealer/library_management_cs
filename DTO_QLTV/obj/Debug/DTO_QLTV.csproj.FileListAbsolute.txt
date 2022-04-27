@@ -1,0 +1,6 @@
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\bin\Debug\DTO_QLTV.dll
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\bin\Debug\DTO_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.AssemblyReference.cache
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.CoreCompileInputs.cache
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.dll
+D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.pdb

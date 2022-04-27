@@ -1,0 +1,11 @@
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\BUS_QLTV.dll
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\BUS_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\DAL_QLTV.dll
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\DTO_QLTV.dll
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\DAL_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\bin\Debug\DTO_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\obj\Debug\BUS_QLTV.csproj.AssemblyReference.cache
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\obj\Debug\BUS_QLTV.csproj.CoreCompileInputs.cache
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\obj\Debug\BUS_QLTV.csproj.CopyComplete
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\obj\Debug\BUS_QLTV.dll
+D:\WinformsCuoiKy\QLTV\BUS_QLTV\obj\Debug\BUS_QLTV.pdb

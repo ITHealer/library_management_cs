@@ -1,0 +1,9 @@
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\bin\Debug\DAL_QLTV.dll
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\bin\Debug\DAL_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\bin\Debug\DTO_QLTV.dll
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\bin\Debug\DTO_QLTV.pdb
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\obj\Debug\DAL_QLTV.csproj.AssemblyReference.cache
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\obj\Debug\DAL_QLTV.csproj.CoreCompileInputs.cache
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\obj\Debug\DAL_QLTV.csproj.CopyComplete
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\obj\Debug\DAL_QLTV.dll
+D:\WinformsCuoiKy\QLTV\DAL_QLTV\obj\Debug\DAL_QLTV.pdb
