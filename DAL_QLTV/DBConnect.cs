@@ -9,6 +9,6 @@ namespace DAL_QLTV
 {
     public class DBConnect
     {
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-F1OLJ2J\SQLEXPRESS;Initial Catalog=QLThuVien;Integrated Security=True");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=CANH-DHQN\SQLEXPRESS;Initial Catalog=QLThuVien;Integrated Security=True");
     }
 }

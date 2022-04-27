@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLTV;
 using BUS_QLTV;
+using System.Data.SqlClient;
 namespace QLTV
 {
     public partial class frmQLDG : Form
@@ -44,7 +45,8 @@ namespace QLTV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtMaDG.Text != "" && txtHoTen.Text != "")
+            
+            if (txtHoTen.Text != "")
             {
                 bool gt;
                 if (rbNam.Checked)
@@ -55,9 +57,9 @@ namespace QLTV
                 {
                     gt = false;
                 }
+
                 // Tạo DTo
                 DTO_DocGia tv = new DTO_DocGia(txtMaDG.Text, txtHoTen.Text, gt, dtpNgaySinh.Value); // Vì ID tự tăng nên để ID số gì cũng dc
-
                 // Them
                 if (busDG.themDocGia(tv))
                 {

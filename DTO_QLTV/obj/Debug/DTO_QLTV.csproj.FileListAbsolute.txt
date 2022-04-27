@@ -4,3 +4,9 @@ D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.AssemblyReference.cach
 D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.CoreCompileInputs.cache
 D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.dll
 D:\WinformsCuoiKy\QLTV\DTO_QLTV\obj\Debug\DTO_QLTV.pdb
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\bin\Debug\DTO_QLTV.dll
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\bin\Debug\DTO_QLTV.pdb
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.CoreCompileInputs.cache
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\obj\Debug\DTO_QLTV.dll
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\obj\Debug\DTO_QLTV.pdb
+F:\B1_BAI_TAP_LT_Desktop\Hoc_ky_2_2020_2021\SV_Hoai\DTO_QLTV\obj\Debug\DTO_QLTV.csproj.AssemblyReference.cache
