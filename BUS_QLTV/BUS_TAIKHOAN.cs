@@ -28,6 +28,8 @@ namespace BUS_QLTV
         {
             return dalTaiKhoan.xoaTaiKhoan(tk);
         }
+
+        // kiểm tra đăng nhập
         public int checkLogin(string user, string pass)
         {
             return dalTaiKhoan.checkLogin(user, pass);

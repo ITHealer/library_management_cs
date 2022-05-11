@@ -12,7 +12,7 @@ namespace DTO_QLTV
         private string _HoTen;
         private bool _GioiTinh;
         private DateTime _NgaySinh;
-
+        
         public DTO_DocGia() { }
 
         public DTO_DocGia(string maDG, string ht, bool gt, DateTime ngaySinh)

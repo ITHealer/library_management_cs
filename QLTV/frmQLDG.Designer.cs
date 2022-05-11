@@ -71,6 +71,7 @@ namespace QLTV
             this.dtgvDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDG.Location = new System.Drawing.Point(6, 17);
             this.dtgvDG.Name = "dtgvDG";
+            this.dtgvDG.RowHeadersWidth = 62;
             this.dtgvDG.Size = new System.Drawing.Size(568, 181);
             this.dtgvDG.TabIndex = 0;
             this.dtgvDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDG_CellClick);
@@ -199,6 +200,7 @@ namespace QLTV
             // 
             // txtMaDG
             // 
+            this.txtMaDG.Enabled = false;
             this.txtMaDG.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDG.Location = new System.Drawing.Point(122, 50);
             this.txtMaDG.Name = "txtMaDG";
@@ -274,7 +276,7 @@ namespace QLTV
             this.Controls.Add(this.groupBox1);
             this.Name = "frmQLDG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý độc gỉa";
+            this.Text = "Quản lý độc giả";
             this.Load += new System.EventHandler(this.frmQLDG_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDG)).EndInit();

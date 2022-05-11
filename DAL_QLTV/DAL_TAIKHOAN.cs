@@ -65,19 +65,20 @@ namespace DAL_QLTV
         {
             try
             {
-                // Ket noi
+                // Mở kết nối
                 _conn.Open();
+                if(checkLogin(s.TenDangNhap, s.MatKhau) == 0)
+                {
+                    // Query string - vì mình để TV_ID là identity (giá trị tự tăng dần) nên ko cần fải insert ID
+                    string SQL = string.Format("INSERT INTO DangNhap(TenDangNhap, MatKhau, Quyen) VALUES ('{0}', '{1}', '{2}')", s.TenDangNhap, s.MatKhau, s.Quyen);
 
-                // Query string - vì mình để TV_ID là identity (giá trị tự tăng dần) nên ko cần fải insert ID
-                string SQL = string.Format("INSERT INTO DangNhap(TenDangNhap, MatKhau, Quyen) VALUES ('{0}', '{1}', '{2}')", s.TenDangNhap, s.MatKhau, s.Quyen);
-                
-                // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
-                SqlCommand cmd = new SqlCommand(SQL, _conn);
+                    // Command (mặc định command type = text nên chúng ta khỏi fải làm gì nhiều).
+                    SqlCommand cmd = new SqlCommand(SQL, _conn);
 
-                // Query và kiểm tra
-                if (cmd.ExecuteNonQuery() > 0)
-                    return true;
-
+                    // Query và kiểm tra
+                    if (cmd.ExecuteNonQuery() > 0)
+                        return true;
+                }
             }
             catch (Exception e)
             {
@@ -88,7 +89,6 @@ namespace DAL_QLTV
                 // Dong ket noi
                 _conn.Close();
             }
-
             return false;
         }
 
@@ -96,7 +96,7 @@ namespace DAL_QLTV
         {
             try
             {
-                // Ket noi
+                // Mở kết nối
                 _conn.Open();
 
                 // Query string
@@ -108,7 +108,6 @@ namespace DAL_QLTV
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
-
             }
             catch (Exception e)
             {
@@ -119,7 +118,6 @@ namespace DAL_QLTV
                 // Dong ket noi
                 _conn.Close();
             }
-
             return false;
         }
 
@@ -127,7 +125,7 @@ namespace DAL_QLTV
         {
             try
             {
-                // Ket noi
+                // Mở kết nối
                 _conn.Open();
 
                 // Query string - vì xóa chỉ cần ID nên chúng ta ko cần 1 DTO, ID là đủ
@@ -138,7 +136,6 @@ namespace DAL_QLTV
                 // Query và kiểm tra
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
-
             }
             catch (Exception e)
             {
@@ -149,7 +146,6 @@ namespace DAL_QLTV
                 // Dong ket noi
                 _conn.Close();
             }
-
             return false;
         }
     }

@@ -32,20 +32,17 @@ namespace QLTV
             try
             {
                 if(busTK.checkLogin(username, password) == 1){
-                    //frmMain f = new frmMain();
-                    //f.ShowDialog();
-                        frmMain f = new frmMain();
-                        f.ShowDialog();
-                    
+                    frmMain f = new frmMain();
+                    f.ShowDialog();
                 }
                 else if(busTK.checkLogin(username, password) == 2)
                 {
-                    frmQLSach f = new frmQLSach();
+                    frmXemSach f = new frmXemSach();
                     f.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Tên đăng nhập/Mật khẩu không hợp lệ");
+                    MessageBox.Show("Tên đăng nhập/Mật khẩu không hợp lệ!");
                 }
             }
             catch (Exception ex)

@@ -82,6 +82,12 @@
     <Compile Include="frmQLTK.Designer.cs">
       <DependentUpon>frmQLTK.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXemSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemSach.Designer.cs">
+      <DependentUpon>frmXemSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhap.resx">
@@ -102,6 +108,9 @@
     <EmbeddedResource Include="frmQLTK.resx">
       <DependentUpon>frmQLTK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmXemSach.resx">
+      <DependentUpon>frmXemSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +143,12 @@
       <Project>{4b45e8b1-b5d1-4ec4-a666-3c007580f91c}</Project>
       <Name>DTO_QLTV</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

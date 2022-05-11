@@ -29,10 +29,10 @@ namespace QLTV
         {
             if (txtUser.Text != "" && txtPass.Text != "")
             {
-                // Tạo DTo
+                // Tạo DTO
                 DTO_TaiKhoan sv = new DTO_TaiKhoan(txtUser.Text, txtPass.Text, Int32.Parse(cbbQuyen.Text)); // Vì ID tự tăng nên để ID số gì cũng dc
 
-                // Them
+                // Thêm
                 if (busTK.themTaiKhoan(sv))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -51,7 +51,7 @@ namespace QLTV
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             //https://docs.microsoft.com/vi-vn/dotnet/desktop/winforms/controls/selected-cells-rows-and-columns-datagridview?view=netframeworkdesktop-4.8
             Int32 selectedCellCount =
                             dtgvTK.GetCellCount(DataGridViewElementStates.Selected);
@@ -59,8 +59,7 @@ namespace QLTV
             {
             if (txtUser.Text != "" && txtPass.Text != "")
                 {
-                    
-                    // Tạo DTo
+                    // Tạo DTO
                     DTO_TaiKhoan tv = new DTO_TaiKhoan(txtUser.Text, txtPass.Text, Int32.Parse(cbbQuyen.Text)); 
 
                     // Sửa
@@ -87,16 +86,11 @@ namespace QLTV
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             Int32 selectedCellCount =
                             dtgvTK.GetCellCount(DataGridViewElementStates.Selected);
             if (selectedCellCount > 0)
             {
-
-                // Lấy row hiện tại
-                //DataGridViewRow row = dtgvTK.SelectedRows[0];
-                //string tdn = row.Cells[0].Value.ToString();
-
                 string tdn = txtUser.Text.Trim();
 
                 // Xóa

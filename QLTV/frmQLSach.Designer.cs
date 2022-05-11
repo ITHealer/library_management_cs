@@ -32,6 +32,9 @@ namespace QLTV
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dtgvSach = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.txtNXB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -43,6 +46,7 @@ namespace QLTV
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSach)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -52,10 +56,10 @@ namespace QLTV
             // 
             this.groupBox4.Controls.Add(this.dtgvSach);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(26, 193);
+            this.groupBox4.Location = new System.Drawing.Point(27, 222);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(580, 216);
-            this.groupBox4.TabIndex = 7;
+            this.groupBox4.Size = new System.Drawing.Size(580, 182);
+            this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Sách";
             // 
@@ -63,14 +67,18 @@ namespace QLTV
             // 
             this.dtgvSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvSach.Location = new System.Drawing.Point(6, 17);
+            this.dtgvSach.Location = new System.Drawing.Point(6, 16);
             this.dtgvSach.Name = "dtgvSach";
-            this.dtgvSach.Size = new System.Drawing.Size(568, 193);
+            this.dtgvSach.Size = new System.Drawing.Size(568, 166);
             this.dtgvSach.TabIndex = 0;
-            this.dtgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSach_CellClick);
+            this.dtgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSach_CellClick_1);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnReload);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.btnTim);
+            this.groupBox3.Controls.Add(this.txtTim);
             this.groupBox3.Controls.Add(this.txtNXB);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.btnThoat);
@@ -82,24 +90,54 @@ namespace QLTV
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(26, 12);
+            this.groupBox3.Location = new System.Drawing.Point(27, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(580, 175);
-            this.groupBox3.TabIndex = 6;
+            this.groupBox3.Size = new System.Drawing.Size(580, 209);
+            this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 25);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Sách cần tìm";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnTim
+            // 
+            this.btnTim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Location = new System.Drawing.Point(340, 173);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(90, 30);
+            this.btnTim.TabIndex = 13;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // txtTim
+            // 
+            this.txtTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTim.Location = new System.Drawing.Point(122, 177);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(170, 26);
+            this.txtTim.TabIndex = 12;
             // 
             // txtNXB
             // 
             this.txtNXB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNXB.Location = new System.Drawing.Point(395, 72);
+            this.txtNXB.Location = new System.Drawing.Point(122, 133);
             this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Size = new System.Drawing.Size(154, 26);
+            this.txtNXB.Size = new System.Drawing.Size(170, 26);
             this.txtNXB.TabIndex = 11;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(314, 72);
+            this.label4.Location = new System.Drawing.Point(24, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 10;
@@ -110,54 +148,54 @@ namespace QLTV
             // 
             this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(459, 136);
+            this.btnThoat.Location = new System.Drawing.Point(471, 95);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(90, 30);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click_1);
             // 
             // btnXoa
             // 
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(312, 136);
+            this.btnXoa.Location = new System.Drawing.Point(340, 95);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 30);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(169, 136);
+            this.btnSua.Location = new System.Drawing.Point(471, 50);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(90, 30);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnThem
             // 
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(24, 136);
+            this.btnThem.Location = new System.Drawing.Point(340, 50);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 30);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // txtTenSach
             // 
             this.txtTenSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSach.Location = new System.Drawing.Point(122, 97);
+            this.txtTenSach.Location = new System.Drawing.Point(122, 92);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(170, 26);
             this.txtTenSach.TabIndex = 2;
@@ -173,7 +211,7 @@ namespace QLTV
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 98);
+            this.label3.Location = new System.Drawing.Point(24, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 25);
             this.label3.TabIndex = 0;
@@ -200,6 +238,18 @@ namespace QLTV
             this.label1.Text = "Quản lý sách";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnReload
+            // 
+            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReload.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.Location = new System.Drawing.Point(471, 172);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(90, 30);
+            this.btnReload.TabIndex = 15;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // frmQLSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +274,11 @@ namespace QLTV
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dtgvSach;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.TextBox txtTim;
+        private System.Windows.Forms.TextBox txtNXB;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -233,7 +288,6 @@ namespace QLTV
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNXB;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnReload;
     }
 }

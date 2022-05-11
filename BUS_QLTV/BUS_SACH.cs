@@ -16,6 +16,12 @@ namespace BUS_QLTV
         {
             return dalSach.getSach();
         }
+
+        // tìm kiếm sách
+        public DataTable timKiem(string sach)
+        {
+            return dalSach.timKiem(sach);
+        }
         public bool themSach(DTO_Sach sach)
         {
             return dalSach.themSach(sach);

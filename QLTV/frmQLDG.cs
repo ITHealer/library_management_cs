@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO_QLTV;
 using BUS_QLTV;
+using System.Data.SqlClient;
 namespace QLTV
 {
     public partial class frmQLDG : Form
     {
         BUS_DOCGIA busDG = new BUS_DOCGIA();
+        BUS_MUONSACH busMS = new BUS_MUONSACH();
         public frmQLDG()
         {
             InitializeComponent();
@@ -24,11 +26,13 @@ namespace QLTV
             this.Close();
         }
 
+        // load dữ liệu lên datagridview
         private void frmQLDG_Load(object sender, EventArgs e)
         {
             dtgvDG.DataSource = busDG.getDocGia();
         }
 
+        // click vào một dòng trong datagridview dữ liệu sẽ được map lên trên các ô
         private void dtgvDG_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtgvDG.CurrentCell.RowIndex;
@@ -44,7 +48,7 @@ namespace QLTV
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtMaDG.Text != "" && txtHoTen.Text != "")
+            if (txtHoTen.Text != "")
             {
                 bool gt;
                 if (rbNam.Checked)
@@ -55,10 +59,10 @@ namespace QLTV
                 {
                     gt = false;
                 }
-                // Tạo DTo
-                DTO_DocGia tv = new DTO_DocGia(txtMaDG.Text, txtHoTen.Text, gt, dtpNgaySinh.Value); // Vì ID tự tăng nên để ID số gì cũng dc
 
-                // Them
+                // Tạo DTO
+                DTO_DocGia tv = new DTO_DocGia(txtMaDG.Text, txtHoTen.Text, gt, dtpNgaySinh.Value); // Vì ID tự tăng nên để ID số gì cũng dc
+                // Thêm
                 if (busDG.themDocGia(tv))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -77,7 +81,7 @@ namespace QLTV
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             Int32 selectedCellCount =
                             dtgvDG.GetCellCount(DataGridViewElementStates.Selected);
             if (selectedCellCount > 0)
@@ -93,7 +97,7 @@ namespace QLTV
                     {
                         gt = false;
                     }
-                    // Tạo DTo
+                    // Tạo DTO
                     DTO_DocGia tv = new DTO_DocGia(txtMaDG.Text, txtHoTen.Text, gt, dtpNgaySinh.Value);
 
                     // Sửa
@@ -120,27 +124,27 @@ namespace QLTV
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             Int32 selectedCellCount =
                             dtgvDG.GetCellCount(DataGridViewElementStates.Selected);
             if (selectedCellCount > 0)
             {
-
-                // Lấy row hiện tại
-                //DataGridViewRow row = dtgvTK.SelectedRows[0];
-                //string tdn = row.Cells[0].Value.ToString();
-
                 string tdn = txtMaDG.Text.Trim();
-
-                // Xóa
-                if (busDG.xoaDocGia(tdn))
+                if (busMS.xoaMuonSach2(tdn))
                 {
-                    MessageBox.Show("Xóa thành công");
-                    dtgvDG.DataSource = busDG.getDocGia(); // refresh datagridview
+                    if (busDG.xoaDocGia(tdn))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        dtgvDG.DataSource = busDG.getDocGia(); // refresh datagridview
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa ko thành công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xóa ko thành công");
+                    MessageBox.Show("Xóa không thành công");
                 }
             }
         }

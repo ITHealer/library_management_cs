@@ -14,22 +14,10 @@ namespace QLTV
     public partial class frmQLSach : Form
     {
         BUS_SACH busSach = new BUS_SACH();
+        BUS_MUONSACH busMS = new BUS_MUONSACH();
         public frmQLSach()
         {
             InitializeComponent();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dtgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int i = dtgvSach.CurrentCell.RowIndex;
-            txtMaSach.Text = dtgvSach.Rows[i].Cells[0].Value.ToString();
-            txtTenSach.Text = dtgvSach.Rows[i].Cells[1].Value.ToString();
-            txtNXB.Text = dtgvSach.Rows[i].Cells[2].Value.ToString();
         }
 
         private void frmQLSach_Load(object sender, EventArgs e)
@@ -37,14 +25,22 @@ namespace QLTV
             dtgvSach.DataSource = busSach.getSach();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (txtTim.Text != "")
+            {
+                dtgvSach.DataSource = busSach.timKiem(txtTim.Text);
+            }
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             if (txtMaSach.Text != "" && txtTenSach.Text != "" && txtNXB.Text != "")
             {
-                // Tạo DTo
+                // Tạo DTO
                 DTO_Sach s = new DTO_Sach(txtMaSach.Text, txtTenSach.Text, txtNXB.Text); // Vì ID tự tăng nên để ID số gì cũng dc
 
-                // Them
+                // Thêm
                 if (busSach.themSach(s))
                 {
                     MessageBox.Show("Thêm thành công");
@@ -61,9 +57,9 @@ namespace QLTV
             }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             //https://docs.microsoft.com/vi-vn/dotnet/desktop/winforms/controls/selected-cells-rows-and-columns-datagridview?view=netframeworkdesktop-4.8
             Int32 selectedCellCount =
                             dtgvSach.GetCellCount(DataGridViewElementStates.Selected);
@@ -71,8 +67,7 @@ namespace QLTV
             {
                 if (txtMaSach.Text != "" && txtTenSach.Text != "" && txtNXB.Text != "")
                 {
-
-                    // Tạo DTo
+                    // Tạo DTO
                     DTO_Sach s = new DTO_Sach(txtMaSach.Text, txtTenSach.Text, txtNXB.Text);
 
                     // Sửa
@@ -97,31 +92,49 @@ namespace QLTV
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            // Kiểm tra nếu có chọn table rồi
+            // Kiểm tra đã chọn dòng nào trong datagridview chưa
             Int32 selectedCellCount =
                             dtgvSach.GetCellCount(DataGridViewElementStates.Selected);
             if (selectedCellCount > 0)
             {
-
-                // Lấy row hiện tại
-                //DataGridViewRow row = dtgvTK.SelectedRows[0];
-                //string tdn = row.Cells[0].Value.ToString();
-
                 string tdn = txtMaSach.Text.Trim();
-
-                // Xóa
-                if (busSach.xoaSach(tdn))
+                if (busMS.xoaMuonSach3(tdn))
                 {
-                    MessageBox.Show("Xóa thành công");
-                    dtgvSach.DataSource = busSach.getSach(); // refresh datagridview
+                    if (busSach.xoaSach(tdn))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        dtgvSach.DataSource = busSach.getSach(); // refresh datagridview
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa ko thành công");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xóa ko thành công");
+                    MessageBox.Show("Xóa không thành công");
                 }
             }
+        }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dtgvSach_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dtgvSach.CurrentCell.RowIndex;
+            txtMaSach.Text = dtgvSach.Rows[i].Cells[0].Value.ToString();
+            txtTenSach.Text = dtgvSach.Rows[i].Cells[1].Value.ToString();
+            txtNXB.Text = dtgvSach.Rows[i].Cells[2].Value.ToString();
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            dtgvSach.DataSource = busSach.getSach();
         }
     }
 }

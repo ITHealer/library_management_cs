@@ -45,6 +45,7 @@ namespace QLTV
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvMuonSach)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -73,6 +74,7 @@ namespace QLTV
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnThongKe);
             this.groupBox3.Controls.Add(this.dtpNgayTra);
             this.groupBox3.Controls.Add(this.dtpNgayMuon);
             this.groupBox3.Controls.Add(this.label5);
@@ -94,6 +96,7 @@ namespace QLTV
             // 
             // dtpNgayTra
             // 
+            this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayTra.Location = new System.Drawing.Point(417, 102);
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(200, 20);
@@ -101,6 +104,7 @@ namespace QLTV
             // 
             // dtpNgayMuon
             // 
+            this.dtpNgayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayMuon.Location = new System.Drawing.Point(417, 56);
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(200, 20);
@@ -142,7 +146,7 @@ namespace QLTV
             // 
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(358, 136);
+            this.btnXoa.Location = new System.Drawing.Point(278, 136);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 30);
             this.btnXoa.TabIndex = 7;
@@ -154,7 +158,7 @@ namespace QLTV
             // 
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(193, 136);
+            this.btnSua.Location = new System.Drawing.Point(150, 136);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(90, 30);
             this.btnSua.TabIndex = 6;
@@ -220,6 +224,18 @@ namespace QLTV
             this.label1.Text = "Quản lý mượn sách";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Location = new System.Drawing.Point(404, 136);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(90, 30);
+            this.btnThongKe.TabIndex = 9;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
             // frmQLMuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +273,6 @@ namespace QLTV
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }
